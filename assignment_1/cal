@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<% 
+	String op = request.getParameter("op");
+	String x = request.getParameter("x");
+		String y = request.getParameter("y");
+	int x_val = Integer.parseInt(x);
+	int y_val = Integer.parseInt(y);
+	
+	if (op =="+"){
+		out.println(x_val + y_val);
+	}
+	else if (op == "-"){
+		out.println(x_val - y_val);
+	}
+	else if (op == "x"){
+		out.println(x_val * y_val);
+	}
+	else{
+		if(y_val == 0){
+			out.println("0으로 나눌 수 없습니다.");
+		}
+		else{
+			float result = (float)x_val / (float)y_val;
+			out.println(result);
+		}
+	}
+	%>
+</body>
+</html> 
