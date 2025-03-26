@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="cal.jsp" method="post">
+		x <input type="text" name="x">
+		y <input type="text" name="y">
+		<br>
+		<input type="submit" value = "+" name = "op">
+		<input type="submit" value = "-" name = "op">
+		<input type="submit" value = "x" name = "op">
+		<input type="submit" value = "/" name = "op">
+	</form>
+</body>
+</html>
