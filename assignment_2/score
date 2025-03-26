@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<% 
+	String kor = request.getParameter("korean");
+	String eng = request.getParameter("english");
+	String math = request.getParameter("math");
+	int kor_val = Integer.parseInt(kor);
+	int eng_val = Integer.parseInt(eng);
+	int math_val = Integer.parseInt(math);
+	
+	out.println("국어 점수는 " + kor_val);
+	out.println("영어 점수는 " + eng_val);
+	out.println("수학 점수는 " + math_val);
+
+	out.println("총 점수는 " + (kor_val + eng_val + math_val));
+
+	out.println("평균 점수는 " + (kor_val + eng_val + math_val) / 3);
+	%>
+</body>
+</html> 
